@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script th:href="@{/webjars/bootstrap/4.1.3/css/bootstrap.min.css}"></script>
+</head>
+<body>
+<!--<form action="/aqi">
+    经度：<input type="text" name="lat"/>
+    纬度：<input type="text" name="lon"/>
+    <button type="button" value="查询"></button>
+</form>-->
+结果:<span>[[${aqi}]]</span>
+</body>
+</html>

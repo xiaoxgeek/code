@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" rel="stylesheet">
+    <link th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap-theme.css}" rel="stylesheet">
+</head>
+<body>
+<div class="col-xs-6 col-md-offset-3">
+<!--<label>经纬度查询：</label>
+<div class="panel panel-default" style="width: 500px">
+    <div class="panel-body">
+        <div class="col-centered">
+            <form th:action="@{/aqi}" method="get" class="form-inline">
+                <div class="form-group">
+                    <label for="exampleInputEmail1">经度</label>
+                    <input type="text" class="form-control" style="width:150px" id="exampleInputEmail1" placeholder="经度" th:name="lat">
+                </div>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">经度</label>
+                    <input type="text" class="form-control" style="width:150px" id="exampleInputEmail2" placeholder="纬度" th:name="lon" width="100px">
+                </div>
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>-->
+
+<label>地址查询天气：</label>
+<div class="panel panel-default" style="width: 500px">
+    <div class="panel-body">
+        <form th:action="@{/weather}" method="get" class="form-inline">
+            <div class="form-group">
+                <label for="exampleInputEmail1">地址：</label>
+                <input type="text" class="form-control" style="width:150px" id="exampleInputEmail2" placeholder="地址" th:name="address" width="100px">
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+        </form>
+    </div>
+</div>
+
+<div>
+    <label th:if="${not #strings.isEmpty(address)}">[[${address}]]的天气： [[${aqi}]]</label>
+    <!--<label th:if="${not #strings.isEmpty(lat)}">[[${lat}]] [[${lon}]]的天气质量是[[${aqi}]]</label>-->
+</div>
+</div>
+</body>
+</html>
