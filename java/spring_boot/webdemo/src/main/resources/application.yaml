@@ -1,0 +1,3 @@
+# 设置日志目录：项目根目录下
+logging:
+  path: /spring/log
